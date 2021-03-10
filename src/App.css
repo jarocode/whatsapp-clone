@@ -2,6 +2,7 @@
 
 aside {
   min-width: 25rem!important;
+  position: fixed!important;
 }
 
 .ant-layout-content{

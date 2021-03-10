@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import useSideBarStyles from './jss/SidebarStyle'
+import useSideBarStyles from './jss/SidebarStyle';
+import useChatContentStyles from './jss/ChatContentStyle';
 import { 
   Layout,
   Menu, 
@@ -35,6 +36,7 @@ const { SubMenu } = Menu;
 
 const App = () => {
   const {menuIcon, menuIcon2} = useSideBarStyles();
+  const {chatBackground} = useChatContentStyles();
   return(
   <>
     <Layout>
@@ -75,7 +77,7 @@ const App = () => {
         
       </Sider>
       <Layout style={{width: '60%'}}>
-        <Header style={{background: '#ededed', position: 'fixed', width: '100%', zIndex: '40', padding: '0 1rem' }}>
+        <Header style={{background: '#ededed', width: '100%', zIndex: '40', left: '25rem',padding: '0 1rem', position:'fixed' }}>
           <Row>
             
             <Col span={4}>
@@ -94,8 +96,8 @@ const App = () => {
           
           </Row>
         </Header>
-        <Content style={{position: 'fixed', height: '100%', width: '100%'}}>Content</Content>
-        <Footer style={{position: 'fixed', bottom: '0', width: '100%'}}>Footer</Footer>
+        <Content className={chatBackground}>Content</Content>
+        <Footer style={{ bottom: '0', width: '100%', position: 'fixed', bottom: '0', left:'25rem'}}>Footer</Footer>
       </Layout>
     </Layout>
   </>
