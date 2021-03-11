@@ -7,6 +7,17 @@ const useSideBarStyles = createUseStyles({
     },
     menuIcon2 : {
         filter: 'invert(56%) sepia(0%) saturate(290%) hue-rotate(177deg) brightness(101%) contrast(92%)', 
+    },
+    chatContactDiv: {
+        background: '#fff', 
+        width: '10rem', 
+        height: '100vh',
+    },
+    chatContactRow: {
+        padding:'.5rem .7rem .5rem .7rem',
+        '&:hover' : {
+            background: '#f6f6f6'
+        }
     }
 });
 

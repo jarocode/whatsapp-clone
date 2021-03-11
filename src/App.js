@@ -15,6 +15,7 @@ import {
  import dottedMenu from './assets/icons/svg/dottedMenu.svg';
  import chatIcon from './assets/icons/svg/chat.svg';
  import status from './assets/icons/svg/status.svg';
+ import caretDown from './assets/icons/svg/caretDown.svg';
 
 import {
   MenuUnfoldOutlined,
@@ -35,7 +36,7 @@ const { SubMenu } = Menu;
 
 
 const App = () => {
-  const {menuIcon, menuIcon2} = useSideBarStyles();
+  const {menuIcon, menuIcon2, chatContactDiv, chatContactRow} = useSideBarStyles();
   const {chatBackground} = useChatContentStyles();
   return(
   <>
@@ -53,8 +54,8 @@ const App = () => {
             <Col span={24} style={{padding: '.5rem .7rem .5rem .7rem', background: '#f6f6f6'}}>
               <Input size="large" placeholder="large size" prefix={<SearchOutlined />} style={{borderRadius: '1.5rem', border: 'none'}} />
             </Col>
-            <Col span={24} style= {{background: '#fff', width: '10rem', height: '100vh'}}>
-              <Row style={{padding:'.5rem .7rem .5rem .7rem', }} >
+            <Col span={24} className = {chatContactDiv}>
+              <Row  className={chatContactRow} >
                   <Col span={4}>
                     <Avatar size="large" icon={<UserOutlined />} style={{display: 'block', height: '3rem', width: '3rem'}}/>
                   </Col>
@@ -66,9 +67,10 @@ const App = () => {
                       <Col span={4} style={{marginTop: '-1rem'}}>
                         <Text >11:41</Text>
                       </Col>
-                  </Row>
-                    <Row >
+                    </Row>
+                    <Row  style={{position: 'relative'}}>
                       <Text>Uchman</Text> : <Text>how far my Gee</Text>
+                      <Text style={{position: 'absolute', left: '16.8rem'}}><img src={caretDown} alt='caret' /></Text>
                     </Row>
                   </Col>
               </Row>
@@ -96,7 +98,10 @@ const App = () => {
           
           </Row>
         </Header>
-        <Content className={chatBackground}>Content</Content>
+        <Content className={chatBackground}>
+          <div style={{width: '100%', height: '200rem', background: 'linear-gradient(to bottom, #f00, #0f0)', overflowY: 'auto', overflowX: 'hidden'}}>
+          </div>
+          </Content>
         <Footer style={{ bottom: '0', width: '100%', position: 'fixed', bottom: '0', left:'25rem'}}>Footer</Footer>
       </Layout>
     </Layout>

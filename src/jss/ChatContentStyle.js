@@ -1,9 +1,9 @@
 import { createUseStyles } from 'react-jss';
+import chatBg from '../assets/images/whatsapp-chat-bg.png';
 
 const useChatContentStyles = createUseStyles({
-    
     chatBackground : {
-        background: 'url("../../assets/images/whatsapp-chat-bg.png") no-repeat center/cover',
+        background: `url(${chatBg}) no-repeat center/cover`,
         position: 'fixed', 
         top: '4rem', 
         left: '25rem', 
