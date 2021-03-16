@@ -1,9 +1,5 @@
 @import '~antd/dist/antd.css';
 
-aside {
-  min-width: 25rem!important;
-  position: fixed!important;
-}
 
 .ant-layout-content{
   background: url('./assets/images/whatsapp-chat-bg.png') no-repeat center/cover;

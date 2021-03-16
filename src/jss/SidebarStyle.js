@@ -10,8 +10,11 @@ const useSideBarStyles = createUseStyles({
     },
     chatContactDiv: {
         background: '#fff', 
-        width: '10rem', 
+        width: '25rem', 
         height: '100vh',
+        marginTop: '7.5rem',
+        position: 'fixed',
+        overflowY: 'scroll'
     },
     chatContactRow: {
         padding:'.5rem .7rem .5rem .7rem',
